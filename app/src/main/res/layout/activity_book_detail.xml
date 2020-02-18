@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookDetailActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:id="@+id/detail_book_ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:transitionName="bookRatingBar"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_book_img"
+                app:layout_constraintStart_toEndOf="@+id/detail_book_img"
+                app:layout_constraintTop_toBottomOf="@+id/detail_book_bg" />
+
+            <ImageView
+                android:id="@+id/detail_book_bg"
+                android:layout_width="0dp"
+                android:layout_height="208dp"
+                android:src="@drawable/container_bg"
+                android:transitionName="bookBg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/detail_book_img"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="96dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book1"
+                android:transitionName="bookImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_book_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:maxLines="2"
+                android:minLines="1"
+                android:text="Harry Potter"
+                android:textStyle="bold"
+                android:transitionName="bookTitle"
+                app:layout_constraintEnd_toEndOf="@+id/detail_book_bg"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/detail_book_img"
+                app:layout_constraintTop_toTopOf="@+id/detail_book_img" />
+
+            <TextView
+                android:id="@+id/detail_book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="By J.K. Rowling"
+                android:transitionName="bookAuthor"
+                app:layout_constraintStart_toEndOf="@+id/detail_book_img"
+                app:layout_constraintTop_toBottomOf="@+id/detail_book_title" />
+
+            <TextView
+                android:id="@+id/detail_book_pagesreviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="500 pages | 24 reviews"
+                android:transitionName="bookPageReview"
+                app:layout_constraintStart_toEndOf="@+id/detail_book_img"
+                app:layout_constraintTop_toBottomOf="@+id/detail_book_author" />
+
+            <TextView
+                android:id="@+id/detail_book_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="score"
+                android:transitionName="bookScore"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_book_ratingBar"
+                app:layout_constraintStart_toEndOf="@+id/detail_book_ratingBar"
+                app:layout_constraintTop_toTopOf="@+id/detail_book_ratingBar" />
+
+            <EditText
+                android:id="@+id/detail_book_review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/container_bg"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:longClickable="false"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="vsdfsadf sadfasdf asfdsadfd ff f ffdfedcsfsdf sdfsdf sdfsdfdf "
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_book_img"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/detail_book_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="2019-12-4"
+                app:layout_constraintStart_toStartOf="@+id/detail_book_bg"
+                app:layout_constraintTop_toTopOf="@+id/detail_book_bg" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

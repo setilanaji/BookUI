@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/light_medium_gray"/>
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_insert_photo_24dp"
+        android:bottom="48dp"
+        android:left="28dp"
+        android:right="28dp"
+        android:top="48dp"
+
+        >
+    </item>
+</layer-list>
